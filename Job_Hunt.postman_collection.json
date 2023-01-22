@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "9497ce39-08ee-4fc4-abc9-4f4bea0802f8",
+		"name": "Job_Hunt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23219826"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/backend/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"backend",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0Mzk4MDM0LCJqdGkiOiI4NjFkYTM3YjcxY2I0NjBmYTY0ZWVjZGVmY2M2MGI0YSIsInVzZXJfaWQiOjF9.KPDwPKIHg7aumNx7v-Jr5HMgrhT1AUApczu03P78K1Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"python\",\n    \"type\": \"full_time\",\n    \"location\": \"Islamabad\",\n    \"description\": \"Python developer required with exp of 5 years\",\n    \"company_name\": \"abc\",\n    \"workplace\": \"onsite\",\n    \"experience_level\": \"entry\",\n    \"status\": \"open\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/backend/job/post/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"backend",
+								"job",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0Mzk3MzMxLCJqdGkiOiJiNmZlNDEyMjAxY2Q0OGUzOTgxNWQ1MGNjNGJjMTMyYSIsInVzZXJfaWQiOjF9.q1pLIpuj7ugqM6IlEBlPqfqwMhg7H93lt7nonhPUys8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"open\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/backend/job/1/update/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"backend",
+								"job",
+								"1",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job Hunter",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\" : \"Muhammad\",\n    \"last_name\" : \"Ahmad\",\n    \"username\": \"ahamd@gmail.com\",\n    \"email\": \"ahmad@gmail.com\",\n    \"password\": \"ahmad123\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/backend/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"backend",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ahmad@gmail.com\",\n    \"password\": \"ahmad123\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/backend/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"backend",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Open Jobs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0Mzk3NDA3LCJqdGkiOiI5ZWNhZjJhZjY2NDg0NmY3YWRhOWZjNDljOGRhMGJlYyIsInVzZXJfaWQiOjJ9.6_wRk5s5oWZmSsfAQKwHdO0XjTPIXE03uMa1zJt5rGo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/backend/job/view/?job_title=python&job_location=Islamabad&company_name=abc",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"backend",
+								"job",
+								"view",
+								""
+							],
+							"query": [
+								{
+									"key": "job_title",
+									"value": "python"
+								},
+								{
+									"key": "job_location",
+									"value": "Islamabad"
+								},
+								{
+									"key": "company_name",
+									"value": "abc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0Mzk3NDA3LCJqdGkiOiI5ZWNhZjJhZjY2NDg0NmY3YWRhOWZjNDljOGRhMGJlYyIsInVzZXJfaWQiOjJ9.6_wRk5s5oWZmSsfAQKwHdO0XjTPIXE03uMa1zJt5rGo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "job",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "resume",
+									"type": "file",
+									"src": "/home/cg-dev/Desktop/cheetay_job_portal/Muhammad's Resume.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/backend/job/apply/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"backend",
+								"job",
+								"apply",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
