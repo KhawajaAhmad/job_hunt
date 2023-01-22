@@ -18,3 +18,7 @@ JOB_STATUS_CHOICES = (
     ("occupied", "Occupied"),
     ("closed", "Closed")
 )
+USER_ROLE_CHOICES = (
+    ("admin", "admin"),
+    ("job_hunter", "job_hunter"),
+)

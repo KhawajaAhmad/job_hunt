@@ -1,8 +1,9 @@
-from rest_framework import serializers
-from backend.models import User, Job, Application
 from django.contrib.auth import authenticate
 from django.utils.translation import ugettext_lazy as _
+from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
+
+from backend.models import User, Job, Application
 
 
 class UserSignupSerializer(serializers.ModelSerializer):
@@ -84,7 +85,6 @@ class JobApplicationSerializer(serializers.ModelSerializer):
 
 
 class JobApplicationSerializerNew(serializers.ModelSerializer):
-
     class Meta:
         model = Application
         fields = "__all__"

@@ -7,7 +7,7 @@ with Docker.
 
 ## Without Docker
 ### Clone Repository
-The first step is to clone the repository, To do that, run the following command:
+The first step is to clone the repository, to do that, run the following command:
 ```shell
 git clone https://github.com/KhawajaAhmad/job_hunt.git
 ```
@@ -34,13 +34,13 @@ sudo docker run job_hunt
 ```
 
 ## Migrations
-After setting up the project, run following command to migrate database changes.
+After setting up the project, run the following command to migrate database changes:
 ```shell
 python manage.py migrate
 ```
 
 ## Run
-To run the server, run the following command.
+To run the server, run the following command:
 ```shell
 python manage.py runserver
 ```

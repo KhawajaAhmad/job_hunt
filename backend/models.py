@@ -6,7 +6,8 @@ from utils.choices import (
     JOB_TYPE_CHOICES,
     JOB_WORKPLACE_CHOICES,
     JOB_EXPERIENCE_LEVEL,
-    JOB_STATUS_CHOICES
+    JOB_STATUS_CHOICES,
+    USER_ROLE_CHOICES
 )
 from utils.custom_manager import UserManager
 
@@ -21,7 +22,7 @@ class Job(BaseModel):
     title = models.CharField(max_length=255)
     type = models.CharField(max_length=50, choices=JOB_TYPE_CHOICES)
     location = models.CharField(max_length=50)
-    salary = models.IntegerField(blank=True)
+    salary = models.IntegerField(blank=True, null=True)
     company_name = models.CharField(max_length=50)
     workplace = models.CharField(max_length=50, choices=JOB_WORKPLACE_CHOICES)
     description = models.TextField()
@@ -31,7 +32,7 @@ class Job(BaseModel):
 
 class User(AbstractUser):
     email = models.EmailField(unique=True)
-    role = models.CharField(max_length=50, default="job_hunter")
+    role = models.CharField(max_length=50, default="job_hunter", choices=USER_ROLE_CHOICES)
     is_active = models.BooleanField(default=True)
     objects = UserManager()
     USERNAME_FIELD = "email"
@@ -39,6 +40,9 @@ class User(AbstractUser):
 
 
 class Application(models.Model):
+    first_name = models.CharField(max_length=150)
+    last_name = models.CharField(max_length=150)
+    email = models.EmailField(unique=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_in_application")
     job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name="job_in_application")
     resume = models.FileField(upload_to="resume", validators=[FileExtensionValidator(["pdf", "doc", "docx"])])

@@ -51,7 +51,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0Mzk4MDM0LCJqdGkiOiI4NjFkYTM3YjcxY2I0NjBmYTY0ZWVjZGVmY2M2MGI0YSIsInVzZXJfaWQiOjF9.KPDwPKIHg7aumNx7v-Jr5HMgrhT1AUApczu03P78K1Y",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NDE1ODk1LCJqdGkiOiJjZjA2N2FiNTkwOTk0YWZhYmMwOTVlMTVkMzIxOWQyOCIsInVzZXJfaWQiOjF9.E3RHwPAzp8BnVjAsRqGkxwTZM22V1OnxobJI_-hYrHk",
 									"type": "string"
 								}
 							]
@@ -66,7 +66,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"python\",\n    \"type\": \"full_time\",\n    \"location\": \"Islamabad\",\n    \"description\": \"Python developer required with exp of 5 years\",\n    \"company_name\": \"abc\",\n    \"workplace\": \"onsite\",\n    \"experience_level\": \"entry\",\n    \"status\": \"open\"\n}"
+							"raw": "{\n    \"title\": \"python\",\n    \"type\": \"full_time\",\n    \"location\": \"Islamabad\",\n    \"description\": \"Python developer required with exp of 5 years\",\n    \"company_name\": \"Cheetay\",\n    \"workplace\": \"onsite\",\n    \"experience_level\": \"entry\",\n    \"status\": \"open\"\n}"
 						},
 						"url": {
 							"raw": "http://127.0.0.1:8000/backend/job/post/",
@@ -152,7 +152,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"first_name\" : \"Muhammad\",\n    \"last_name\" : \"Ahmad\",\n    \"username\": \"ahamd@gmail.com\",\n    \"email\": \"ahmad@gmail.com\",\n    \"password\": \"ahmad123\"\n}"
+							"raw": "{\n    \"first_name\" : \"Muhammad\",\n    \"last_name\" : \"Ahmad\",\n    \"username\": \"ahamd2696\",\n    \"email\": \"ahmad@gmail.com\",\n    \"password\": \"ahmad123\"\n}"
 						},
 						"url": {
 							"raw": "http://127.0.0.1:8000/backend/signup/",
@@ -208,7 +208,7 @@
 					"response": []
 				},
 				{
-					"name": "View Open Jobs",
+					"name": "Open Jobs",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -218,7 +218,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0Mzk3NDA3LCJqdGkiOiI5ZWNhZjJhZjY2NDg0NmY3YWRhOWZjNDljOGRhMGJlYyIsInVzZXJfaWQiOjJ9.6_wRk5s5oWZmSsfAQKwHdO0XjTPIXE03uMa1zJt5rGo",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NDE1OTIzLCJqdGkiOiJiOTNhYjViMzc0ZjA0MDczYTBhNmJlNzA0MDM2OTYxOSIsInVzZXJfaWQiOjJ9.Zbd44ClVGLeSbalCEARxtfJEzKLzxQbDqMMTKYL1rnU",
 									"type": "string"
 								}
 							]
@@ -236,7 +236,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/backend/job/view/?job_title=python&job_location=Islamabad&company_name=abc",
+							"raw": "http://127.0.0.1:8000/backend/job/view/?job_title=python&job_location=Islamabad&company_name=Cheetay",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -262,7 +262,7 @@
 								},
 								{
 									"key": "company_name",
-									"value": "abc"
+									"value": "Cheetay"
 								}
 							]
 						}
@@ -277,7 +277,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0Mzk3NDA3LCJqdGkiOiI5ZWNhZjJhZjY2NDg0NmY3YWRhOWZjNDljOGRhMGJlYyIsInVzZXJfaWQiOjJ9.6_wRk5s5oWZmSsfAQKwHdO0XjTPIXE03uMa1zJt5rGo",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NDE1OTIzLCJqdGkiOiJiOTNhYjViMzc0ZjA0MDczYTBhNmJlNzA0MDM2OTYxOSIsInVzZXJfaWQiOjJ9.Zbd44ClVGLeSbalCEARxtfJEzKLzxQbDqMMTKYL1rnU",
 									"type": "string"
 								}
 							]
@@ -288,14 +288,29 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "job",
-									"value": "1",
+									"key": "first_name",
+									"value": "Muhammad",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Ahmad",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "khawaja2696@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "resume",
 									"type": "file",
-									"src": "/home/cg-dev/Desktop/cheetay_job_portal/Muhammad's Resume.pdf"
+									"src": "/home/cg-dev/Desktop/Muhammad's Resume.pdf"
+								},
+								{
+									"key": "job",
+									"value": "1",
+									"type": "text"
 								}
 							]
 						},
